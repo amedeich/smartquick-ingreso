@@ -1,0 +1,26 @@
+<div class="container">
+    <mat-card class="card bronze" (click)="openDialog('bronze', 'bronce')">
+        <mat-card-content>
+            <img height="40" src="https://cdn4.iconfinder.com/data/icons/iconsimple-sport/512/bronze_prize-512.png">
+            <div class="content">
+                <p>Bronce({{bronzeAcum}})</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="card silver" (click)="openDialog('silver', 'plata')">
+        <img height="40" src="https://cdn2.iconfinder.com/data/icons/votes-and-rewards/64/1_first_medal_award-512.png">
+        <mat-card-content>
+            <div class="content">
+                <p>Plata({{silverAcum}})</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="card gold" (click)="openDialog('gold', 'oro')">
+        <img height="40" src="https://cdn1.iconfinder.com/data/icons/flatastic-7/256/gold_metal_blue-512.png">
+        <mat-card-content>
+            <div class="content">
+                <p>Oro({{goldAcum}})</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

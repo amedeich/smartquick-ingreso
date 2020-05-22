@@ -1,0 +1,67 @@
+mat-toolbar.mat-toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    background: #111;
+    color: #fff;
+}
+
+mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-container {
+    width:100%
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.landing-img {
+      background-image: url('../../../assets/img/img1.jpg');
+      height: 280px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+}
+
+.header-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.text-container-atl {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    p {
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+    }
+    small {
+        color: #888;
+        font-weight: bold;
+    }
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

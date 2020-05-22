@@ -1,0 +1,26 @@
+[
+    {
+        "email": "alvaro@test.co",
+        "name": "Alvaro Medina",
+        "password": "123abc",
+        "role": "admin"
+    },
+    {
+        "email": "raul@test.co",
+        "name": "Raul Perez",
+        "password": "123abc",
+        "role": "admin"
+    },
+    {
+        "email": "daniel@test.co",
+        "name": "Daniel Rodriguez",
+        "password": "123abc",
+        "role": "admin"
+    },
+    {
+        "email": "juan@test.co",
+        "name": "Juan Medina",
+        "password": "123abc",
+        "role": "coord"
+    }
+]

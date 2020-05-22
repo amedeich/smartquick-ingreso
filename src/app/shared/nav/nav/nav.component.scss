@@ -1,0 +1,54 @@
+mat-toolbar.mat-toolbar {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    position: fixed;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGt4EM_r-2oqcLhC7uP2o9PUKz52DB7O1Efg7JGuxk2VWJcty9&usqp=CAU');
+    
+    /* make a square container */
+    width: 40px;
+    height: 40px;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: top center;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingreso {
+    font-weight: bold;
+    font-size: 23px;
+    border-bottom: 2px solid gold;
+    font-family: custom-bold;
+}
+
+@media screen and (max-width: 600px) {
+    .name {
+        display: none;
+    }
+  }

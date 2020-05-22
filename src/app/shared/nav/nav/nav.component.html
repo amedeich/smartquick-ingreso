@@ -1,0 +1,14 @@
+<mat-toolbar *ngIf="router.url !== '/login'">
+    <mat-toolbar-row>
+        <div>
+            <span>Prueba<span class="ingreso"> Ingreso</span></span>
+        </div>
+        <div class="avatar-container">
+            <div class="name">{{dataService?._loggedUser?.name}}<small style="color: #888"> ({{getRole(dataService?._loggedUser?.role)}})</small></div>
+            <div class="avatar"></div>
+            <button (click)="logout()" color="warn" mat-icon-button>
+                <mat-icon>exit_to_app</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

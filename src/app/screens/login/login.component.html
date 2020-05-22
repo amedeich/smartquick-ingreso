@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="c2">
+        <div class="c3">
+            <form [formGroup]="form" (ngSubmit)="login()">
+                <div>
+                    <h1 class="title-label">¡Bienvenido!</h1>
+                </div>
+                <div>
+                    <p class="title-label">por favor inicia sesión para continuar.</p>
+                </div>
+                <div>
+                    <mat-form-field class="login">
+                        <mat-label>Correo electrónico</mat-label>
+                        <input class="input" autocomplete="off" style="color: white" matInput type="text" formControlName="email">
+                      </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="login">
+                        <mat-label>Contraseña</mat-label>
+                        <input class="input" autocomplete="off" style="color: white" matInput formControlName="password" type="password">
+                      </mat-form-field>
+                </div>
+                <div>
+                    <button [class.disabled]="form.invalid" class="login-btn" mat-raised-button color="primary">Iniciar sesión</button>
+                </div>
+            </form>
+            <div style="justify-content: center; display: flex; align-items: center;margin-top: 5px;">
+                <p *ngIf="err" style="color: crimson; font-weight: bold;">Credenciales inválidas!</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="panel-container">
+    <div class="landing-img"></div>
+    <div style="padding: 20px">
+        <h1>Vista General</h1>
+    </div>
+    <div *ngIf="loading" class="centered">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div *ngIf="!loading && (!athlete)" class="centered">
+        <span>No se pueden mostrar los atletas, por favor intente de nuevo.</span>
+    </div>
+    <div *ngIf="!loading && (athlete?.length > 0)">
+        <div *ngIf="user.role === 'admin' else maintenance">
+            <mat-tab-group mat-align-tabs="end">
+                <mat-tab label="Atletas">
+                    <app-atlh-view [athletes]="athlete"></app-atlh-view>
+                </mat-tab>
+                <mat-tab label="Por categoría">
+                    <app-category [athletes]="athlete"></app-category>
+                </mat-tab>
+              </mat-tab-group>
+        </div>
+        <ng-template #maintenance>
+            <app-maintenance></app-maintenance>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+.card {
+    margin: 6px;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bronze {
+    background-color: burlywood;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.card:hover {
+    cursor: hover;
+    transition: transform ease .3s;
+    transform: scale(1.1);
+}
+
+.card:active {
+    opacity: 0.7;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    right: 0
+}
+
+p {
+    font-size: 25px;
+    color: #fff;
+}
+
+.container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    margin: 6px
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .card {
+        width: 300px;
+    }
+  }

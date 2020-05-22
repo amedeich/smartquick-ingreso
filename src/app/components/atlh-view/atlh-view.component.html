@@ -1,0 +1,67 @@
+<div fxLayout="row">
+    <mat-form-field class="search">
+        <input matInput (keyup)="applyFilter($event.target.value)" autocomplete="off" placeholder="Busca algún atleta">
+    </mat-form-field>
+</div>
+
+<div>
+
+    <mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="athlete">
+            <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="nombre"> {{row.athlete}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="age">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Edad </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="edad"> {{row.age}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="country">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> País </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="pais"> {{row.country}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Fecha </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="fecha"> {{row.date}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="sport">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Deporte </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="deporte"> {{row.sport}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="year">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Año </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="año"> {{row.year}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="bronze">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Medallas de bronze </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="medalla de bronze"> {{row.bronze}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="gold">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Medallas de oro </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="medalla de oro"> {{row.gold}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="silver">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Medallas de plata </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="medalla de plata"> {{row.silver}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="total">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Total de medallas </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="total de medallas"> {{row.total}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 15]"></mat-paginator>
+</div>

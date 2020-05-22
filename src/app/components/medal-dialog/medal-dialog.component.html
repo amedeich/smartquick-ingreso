@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>
+    TOP 10 mejores de {{data.label.toUpperCase()}}
+</h2>
+
+<mat-dialog-content>
+    <mat-list>
+        <mat-list-item *ngFor="let folder of data.athletes">
+        <img matListAvatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGt4EM_r-2oqcLhC7uP2o9PUKz52DB7O1Efg7JGuxk2VWJcty9&usqp=CAU" >
+          <h2 mat-line>{{folder.athlete}} (<span style="color: #888;">{{folder[data.type]}}</span>)</h2>
+          <p mat-line>{{folder.country}}</p>
+        </mat-list-item>
+    </mat-list>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close [mat-dialog-close]="true" cdkFocusInitial>Cerrar</button>
+</mat-dialog-actions>
